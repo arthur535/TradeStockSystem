@@ -33,8 +33,8 @@ public:
     void place_sell_order(Stock&, unsigned int, double);
     void place_buy_order(Stock&, unsigned int, double);
     
-    void delete_sell_order(int);
-    void delete_buy_order(int);
+    void delete_sell_order(size_t);
+    void delete_buy_order(size_t);
     
     void top_up(double);
     void pay(double);
