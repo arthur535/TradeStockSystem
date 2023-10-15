@@ -73,7 +73,3 @@ Type LimitSellOrder::get_type() const {
 }
 
 double Order::get_price() const { return price; }
-double LimitBuyOrder::get_price() const { return price; }
-double LimitSellOrder::get_price() const { return price; }
-double MarketBuyOrder::get_price() const { return price; }
-double MarketSellOrder::get_price() const { return price; }
