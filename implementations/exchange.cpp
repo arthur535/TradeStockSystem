@@ -17,7 +17,7 @@ void exchange(const Order& buyer_order, const Order& seller_order, double p) {
     if(0 == (Owners::getInstance().owners[seller.get_id()][stock] -= quantity)) {
         Owners::getInstance().owners[seller.get_id()].erase(stock);
     }
-    Owners::getInstance().owners[buyer.get_id()][stock] = quantity;
+    Owners::getInstance().owners[buyer.get_id()][stock] += quantity;
     
     seller.top_up(price);
     buyer.pay(price);
