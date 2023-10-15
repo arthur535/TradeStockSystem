@@ -42,7 +42,6 @@ public:
     MarketBuyOrder(Trader&, Stock&, unsigned int, double);
     MarketBuyOrder(const MarketBuyOrder&);
     Type get_type()  const override;
-    double get_price() const;
 private:
     Type ordertype = MARKET_BUY_ORDER;
 };
@@ -53,7 +52,6 @@ public:
     MarketSellOrder(Trader&, Stock&, unsigned int, double);
     MarketSellOrder(const MarketBuyOrder&);
     Type get_type() const override;
-    double get_price() const;
 private:
     Type ordertype = MARKET_SELL_ORDER;
 };
@@ -67,7 +65,6 @@ public:
     LimitBuyOrder(Trader&, Stock&, unsigned int, double);
     LimitBuyOrder(const LimitBuyOrder&);
     Type get_type() const override;
-    double get_price() const;
 private:
     Type ordertype = LIMIT_BUY_ORDER;
 };
@@ -77,7 +74,6 @@ public:
     LimitSellOrder(Trader&, Stock&, unsigned int, double);
     LimitSellOrder(const LimitSellOrder&);
     Type get_type() const override;
-    double get_price() const;
 private:
     Type ordertype = LIMIT_SELL_ORDER;
 };
