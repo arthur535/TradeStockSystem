@@ -118,13 +118,13 @@ void Trader::reduce_quantity(const Stock& stock, int part) {
     }
 }
 
-void Trader::delete_buy_order(int order_id) {
+void Trader::delete_buy_order(size_t order_id) {
     for(auto it = current_buy_orders.begin(); it != current_buy_orders.end(); ++it) {
         if(it->get_id() == order_id)
             current_buy_orders.erase(it, it);
     }
 }
-void Trader::delete_sell_order(int order_id) {
+void Trader::delete_sell_order(size_t order_id) {
     for(auto it = current_sell_orders.begin(); it != current_sell_orders.end(); ++it) {
         if(it->get_id() == order_id)
             current_sell_orders.erase(it, it);
